@@ -15,5 +15,5 @@ jobs:
         uses: betrybe/store-evaluation-action@v1
         with:
           evaluation-data: ${{ steps.cypress.outputs.result }}
-          environment: staging
+          environment: production
           pr-number: ${{ steps.cypress.outputs.pr-number }}
