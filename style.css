@@ -11,10 +11,17 @@
     margin: auto;
     width: 240px;
     height: 240px;
+    margin-top: 50px;
 }
+
+.selected {
+    background-color: black;
+}
+
 .pixel {
+    background-color: rgb(255, 255, 255);
     display: inline-block;
     width: 40px;
     height: 40px;
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
 }
