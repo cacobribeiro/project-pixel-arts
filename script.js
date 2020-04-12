@@ -1,20 +1,20 @@
 
-let pixels = document.querySelectorAll(".pixel");
-let palette = document.querySelectorAll(".color");
-let selected = document.querySelector(".selected");
+const pixels = document.querySelectorAll('.pixel');
+const palette = document.querySelectorAll('.color');
+const selected = document.querySelector('.selected');
 
-palette[0].classList.add("selected");
-sessionStorage.color = "Black";
+palette[0].classList.add('selected');
+sessionStorage.color = 'Black';
 
-let paletteColors = ["black", "purple", "blue", "green"];
-for (let index = 0; index < palette.length; index++) {
-    palette[index].style.backgroundColor = paletteColors[index];
+const paletteColors = ['black', 'purple', 'blue', 'green'];
+for (let index = 0; index < palette.length; index += 1) {
+  palette[index].style.backgroundColor = paletteColors[index];
 }
 
-for( let i = 0; i < palette.length; i++) {
+for (let i = 0; i < palette.length; i += 1) {
     palette[i].addEventListener("click", function() {
     let color = sessionStorage.setItem("color", event.target.innerHTML);
-    palette[i].classList.add("selected");
+    palette[i].classList.add('selected');
 
     for ( let e = 0; e < pixels.length; e++) {
         pixels[e].addEventListener("click", function(){
