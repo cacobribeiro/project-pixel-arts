@@ -1,22 +1,20 @@
-// let alt = "40px";
-// let larg = "40px";
 
-// for(let index = 0; index < 5; index++) {
-//     let div = document.createElement("div");
-//     div.className = "pixel";
-//     document.querySelector("pixel-board").appendChild(createDiv);
-// }
 let pixels = document.querySelectorAll(".pixel");
 let palette = document.querySelectorAll(".color");
-// let selected = document.getElementsByClassName(".selected");
+let selected = document.querySelector(".selected");
 
-let paletteColors = ["black", "purple", "blue", "green", "pink"];
+palette[0].classList.add("selected");
+sessionStorage.color = "Black";
+
+let paletteColors = ["black", "purple", "blue", "green"];
 for (let index = 0; index < palette.length; index++) {
     palette[index].style.backgroundColor = paletteColors[index];
 }
+
 for( let i = 0; i < palette.length; i++) {
     palette[i].addEventListener("click", function() {
     let color = sessionStorage.setItem("color", event.target.innerHTML);
+    palette[i].classList.add("selected");
 
     for ( let e = 0; e < pixels.length; e++) {
         pixels[e].addEventListener("click", function(){
