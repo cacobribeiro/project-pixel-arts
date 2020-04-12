@@ -1,26 +1,27 @@
 .color {
-    font-size: 0pt;
+    border: 1px solid rgb(0, 0, 0);
     display: inline-block;
-    width: 40px;
+    font-size: 0pt;
     height: 40px;
     margin: black 1px;
-    border: 1px solid rgb(0, 0, 0);
+    width: 40px;
 }
 
 .pixel-board {
-    margin: auto;
-    width: 240px;
     height: 240px;
     margin-top: 50px;
+    margin: auto;
+    width: 240px;
 }
 
 .selected {
+    border: 2px solid rgb(0, 0, 0);
 }
 
 .pixel {
     background-color: rgb(255, 255, 255);
-    display: inline-block;
-    width: 40px;
-    height: 40px;
     border: 1px solid rgb(0, 0, 0);
+    display: inline-block;
+    height: 40px;
+    width: 40px;
 }
